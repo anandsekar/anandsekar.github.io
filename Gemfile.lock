@@ -14,6 +14,7 @@ GEM
     execjs (2.2.1)
     fast-stemmer (1.0.2)
     ffi (1.9.3)
+    ffi (1.9.3-x86-mingw32)
     jekyll (2.3.0)
       classifier-reborn (~> 2.0)
       colorator (~> 0.1)
@@ -66,9 +67,11 @@ GEM
     toml (0.1.1)
       parslet (~> 1.5.0)
     yajl-ruby (1.1.0)
+    yajl-ruby (1.1.0-x86-mingw32)
 
 PLATFORMS
   ruby
+  x86-mingw32
 
 DEPENDENCIES
   jekyll
