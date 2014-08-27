@@ -7,7 +7,7 @@ excerpt:
 tags: []
 image:
   feature:
-date: 2014-08-19T05:21:31-07:00
+date: 2006-01-19T05:21:31-07:00
 ---
 A common problem faced when moving certificates and keys from tomcat to Apache web server is that keytool does not allow you to export the private key in the format that apache’s modssl module requires. [Mark Foster’s](http://mark.foster.cc/kb/openssl-keytool.html) post and [Andrew Morrow’s](http://forum.java.sun.com/thread.jspa?forumID=2&messageID=449486&threadID=154587) post contains valuable information on how to export a key from a JKS keystore.
 
