@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2006-01-15T08:23:09-07:00
+comments: true
 ---
 {% highlight java linenos%}
 {% endhighlight %}

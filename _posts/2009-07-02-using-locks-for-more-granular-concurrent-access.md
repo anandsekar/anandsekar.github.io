@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2009-07-02T17:05:30-07:00
+comments: true
 ---
 
 Locks introduced in Java 5 allow a more granular control on a shared resource. When a method is synchronized only the thread that obtains the lock is allowed to enter into that method or any other synchronized method of the class. However some times we may need a more granular control, typically when we have two or more resources we want to share across threads.

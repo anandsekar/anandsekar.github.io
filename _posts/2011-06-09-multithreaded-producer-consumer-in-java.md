@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2011-06-09T15:50:23-07:00
+comments: true
 ---
 A classic case for multi-threaded programming is the producer consumer problem. In this case there is a producer that generates stuff to be consumed by the consumer, however the rate of production and the rate of consumption vary. This calls the need for having the producer and consumer run off different threads have co-ordinate them through a shared buffer or queue.
 

@@ -2,7 +2,7 @@
 
 title:            Anand Rajasekar
 locale:           en_US
-url:              http://anandsekar.github.io
+url:              #http://anandsekar.github.io
 
 
 # Jekyll configuration
@@ -26,12 +26,12 @@ kramdown:
 
 # Site owner
 owner:
-  name: Anand Rajasekar
-  avatar: bio-photo.jpg
+  name: 
+  avatar: profile.jpg
   bio: ""
   email: 
-  disqus-shortname: 
-  twitter: #anandsekar
+  disqus-shortname: anandsekar
+  twitter: anandsekar
   facebook: #username
   google:
     plus: #username
@@ -40,7 +40,7 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: #username
+  github: anandsekar
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   instagram: #username

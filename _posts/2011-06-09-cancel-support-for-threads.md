@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2011-06-09T15:45:25-07:00
+comments: true
 ---
 
 A common use case is to use worker threads to execute jobs. While it is easy to spin up threads, one must think about adding cancel support to interrupt the job. One strategy to use is to use Thread.interrupt() and the use of a “Poison Pill” to stop the thread.

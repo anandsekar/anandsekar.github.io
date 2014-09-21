@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2009-01-05T16:59:12-07:00
+comments: true
 ---
 
 Java Serialization is a easy way to persist the state of Java Objects. However if the structure of the class changes the serialized bytes is invalidated by the changes. This article suggest how one could implement serialization with Externalizable with support for versions.

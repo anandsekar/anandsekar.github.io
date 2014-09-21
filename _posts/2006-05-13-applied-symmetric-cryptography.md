@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2006-05-13T05:17:47-07:00
+comments: true
 ---
 
 Cryptography in essence tries to solve three main real world problems.

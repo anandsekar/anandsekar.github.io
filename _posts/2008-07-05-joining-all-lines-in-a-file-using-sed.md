@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2008-07-05T17:07:29-07:00
+comments: true
 ---
 Sed (Stream EDitor) is a very powerful stream editor to manipulate text files.
 I needed an utility that would join all lines in a text file to a single line with “\n” as a separator so that I could easily cut and paste inline velocity templates into java code. Here is the final sed command !

@@ -8,6 +8,7 @@ tags: []
 image:
   feature:
 date: 2008-05-08T05:36:57-07:00
+comments: true
 ---
 
 InheritableThreadLocal does not work with tomcat as tomcat thread pool does not clear the thread local contacts after a request has been executed. This results in no good way to share information information between the parent and the child threads that are created using thread local variables.
