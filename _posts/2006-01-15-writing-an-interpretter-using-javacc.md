@@ -10,8 +10,6 @@ image:
 date: 2006-01-15T08:23:09-07:00
 comments: true
 ---
-{% highlight java linenos%}
-{% endhighlight %}
 Ever wondered how an interpreter works ? Well, while evaluating parser generators for executing expressions I wrote this small example.
 Getting to the basics
 What is an Interpreter ?
