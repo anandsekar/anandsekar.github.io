@@ -11,7 +11,22 @@ date: 2011-06-10T15:42:46-07:00
 comments: true
 ---
 
-One of the features that looks great about ActiveMQ is the network of brokers. While it looks great in documentation it absolutly does not work. There are two many issues with the alogrithm it uses to hop, which ends up stranding messages in the broker as well as duplicates in a topic. So without a active-active setup the next best case becomes active-passive setup. This is done by configuring ActiveMQ to write its journal’s to a shared disk where the first broker to aquire a lock on the journal becomes the active. This does not work well too when only the shared network journal is unavailable as ActiveMQ holds on the the existing connections. Thus the only way is to write your own locking mechanism to detect unavailability of shared network drive and shutdown ActiveMQ.
+One of the features that looks great about ActiveMQ is the network of brokers. While it looks great in documentation as of the date of this writing it absolutly does not work. 
+
+
+There are too many issues with the alogrithm ActiveMQ uses to hop messages across a network of brokers, which ends up stranding messages in the broker as well as duplicate messages in a topic. 
+
+
+So without an active-active setup the next best way to have high availablity is for an active-passive setup. 
+This is done by configuring ActiveMQ to write its journal’s to a shared disk where the first broker to aquire a lock on the journal becomes the active, and the passive waits to aquire the lock on the file journal.
+
+
+One of the problems with ActiveMQ is that when the connection to the shared system is lost, ActiveMQ does not release the existing connections from clients and hence does not give complete control to the passive server.
+
+
+This problem can be solved by writing your own locking mechanism to detect unavailability of shared network drive and shutdown ActiveMQ.
+
+
 ![activemqha]({{ site.url }}/assets/images/activemqha/activemqha.png)
 
 Here is a simple program that can detect if the filesystem is available.
@@ -64,6 +79,11 @@ public class TestFileSystemAccess implements Runnable{
 	}
 }
 {% endhighlight java %}
+
+
+All that is needed now is to start the Active MQ server through spring and including initialization of the above file in the same JVM. [http://activemq.apache.org/spring-support.html](Spring Support)
+
+
 The spring configuration will look something like
 {% highlight xml %}
 <broker brokerName="broker" persistent="true" useShutdownHook="false">
@@ -78,3 +98,4 @@ The spring configuration will look something like
  	<constructor-arg>shareddir/activemq-data</constructor-arg>
  </bean>
  {% endhighlight xml %}
+
