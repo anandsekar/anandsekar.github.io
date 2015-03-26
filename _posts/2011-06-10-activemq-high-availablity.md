@@ -64,3 +64,17 @@ public class TestFileSystemAccess implements Runnable{
 	}
 }
 {% endhighlight java %}
+The spring configuration will look something like
+{% highlight xml %}
+<broker brokerName="broker" persistent="true" useShutdownHook="false">
+   <transportConnectors>
+     <transportConnector uri="tcp://localhost:61616"/>
+   </transportConnectors>
+   <persistenceAdapter>
+     <kahaPersistenceAdapter dir="shareddir/activemq-data" maxDataFileLength="33554432"/>
+   </persistenceAdapter>
+ </broker>
+ <bean class="TestFileSystemAccess" init-method="start">
+ 	<constructor-arg>shareddir/activemq-data</constructor-arg>
+ </bean>
+ {% endhighlight xml %}
